@@ -1,0 +1,338 @@
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+using namespace std;
+
+int main() {
+  cout << "><><><><><><><><><><O_O>__<O_O><><><><><><><><><><" << endl;
+  cout << ">>>>>>>>>>>>>> CALCULADORA GEOMETRICA <<<<<<<<<<<<" << endl;
+  cout << "o_oo_oo_oo_oo_oo_oo_oo_oo_oo_oo_oo_oo_oo_oo_oo_oo_" << endl;
+  int opcion, figura;
+  double lado1, lado2, lado3, lado4, radio, apotema, bmayor, bmenor, h;
+  
+  do {
+    cout << "FUNCIONES:" << endl;
+    cout << "1.***PERIMETROS***" << endl;
+    cout << "2.***AREAS***" << endl; 
+    cout << "3.***VOLUMENES***" << endl;
+    cout << "0.***SALIR***" << endl;
+    
+    cout << "Opcion: ";
+    cin >> opcion;
+    
+    if(opcion == 1) {
+
+      cout << "FIGURAS:" << endl;
+      cout << "1.>>>CIRCULO<<<" << endl;
+      cout << "2.>>>CUADRADO<<<" << endl;
+      cout << "3.>>>TRIANGULO<<<" << endl;
+      cout << "4.>>>RECTANGULO<<<" << endl;
+      cout << "5.>>>PENTAGONO<<<" << endl;
+      cout << "6.>>>HEXAGONO<<<" << endl; 
+      cout << "7.>>>HEPTAGONO<<<" << endl;
+      cout << "8.>>>OCTOGONO<<<" << endl;
+      cout << "9.>>>ROMBO<<<" << endl;
+      cout << "10.>>>TRAPECIO<<<" << endl;
+
+      cout << "Figura: ";
+      cin >> figura;
+
+      if(figura == 1) {
+        cout <<" PERIMETRO DEL CIRCULO"<<endl;
+        cout << "Radio: ";
+        cin >> radio;
+        double perimetro = 2 * 3.1416 * radio; 
+        cout << "El Perimetro del Circulo es: " << perimetro << endl;
+
+      } else if(figura == 2) {
+        cout <<" PERIMETRO DEL CUADRADO"<<endl;
+        cout << "Lado: ";
+        cin >> lado1; 
+        double perimetro = 4 * lado1;
+        cout << "El Perimetro del Cuadrado es: " << perimetro << endl;
+
+      } else if(figura == 3) {
+        cout <<" PERIMETRO DEL TRIANGULO"<<endl;
+        cout << "Lado 1: ";
+        cin >> lado1;
+        cout << "Lado 2: ";
+        cin >> lado2;
+        cout << "Lado 3: "; 
+        cin >> lado3;
+        double perimetro = lado1 + lado2 + lado3;
+        cout << "El Perimetro del Triangulo es: " << perimetro << endl;
+
+      } else if(figura == 4) {
+        cout <<" PERIMETRO DEL RECTANGULO"<<endl;
+        cout << "Lado menor: ";
+        cin >> lado1;
+        cout << "Lado mayor: ";
+        cin >> lado2; 
+        double perimetro = 2*lado1 + 2*lado2; 
+        cout << "El Perimetro del Rectangulo es: " << perimetro << endl;
+
+      } else if(figura == 5) {
+        cout <<" PERIMETRO DEL PENTAGONO"<<endl;
+        cout << "Longitud de lado: ";
+        cin >> lado1;
+        double perimetro = 5 * lado1;
+        cout << "El Perimetro del Pentagono es: " << perimetro << endl;
+
+      } else if(figura == 6) {
+        cout <<" PERIMETRO DEL HEXAGONO"<<endl;
+        cout << "Longitud de lado: ";
+        cin >> lado1;
+        double perimetro = 6 * lado1;
+        cout << "El Perimetro del Hexagono es: " << perimetro << endl;
+
+      } else if(figura == 7) {
+        cout <<" PERIMETRO DEL HEPTAGONO"<<endl;
+        cout << "Longitud de lado: ";
+        cin >> lado1;
+        double perimetro = 7 * lado1; 
+        cout << "El Perimetro del Heptagono es: " << perimetro << endl;
+
+      } else if(figura == 8) {
+        cout <<" PERIMETRO DEL OCTOGONO"<<endl;
+        cout << "Longitud de lado: ";
+        cin >> lado1;
+        double perimetro = 8 * lado1;
+        cout << "El Perimetro del Octogono es: " << perimetro << endl;
+
+      } else if(figura == 9) {
+        cout <<" PERIMETRO DEL ROMBO"<<endl;
+        cout << "Lado: ";
+        cin >> lado1;
+        double perimetro = 4 * lado1;
+        cout << "el Perimetro del Rombo es: " << perimetro << endl;
+
+      } else if(figura == 10) {
+        cout <<" PERIMETRO DEL TRAPECIO"<<endl;
+        cout << "Lado 1: ";
+        cin >> lado1;
+        cout << "Lado 2: ";
+        cin >> lado2;
+        cout << "Lado 3: ";
+        cin >> lado3; 
+        cout << "Lado 4: ";
+        cin >> lado4;
+        double perimetro = lado1 + lado2 + lado3 + lado4;
+        cout << "El Perimetro del Trapecio es: " << perimetro << endl;
+      }
+
+    } else if(opcion == 2) {
+        
+      cout << "FIGURAS:" << endl;
+      cout << "1.>>>CIRCULO<<<" << endl;
+      cout << "2.>>>CUADRADO<<<" << endl;
+      cout << "3.>>>TRIANGULO<<<" << endl;
+      cout << "4.>>>RECTANGULO<<<" << endl;
+      cout << "5.>>>PENTAGONO<<<" << endl;
+      cout << "6.>>>HEXAGONO<<<" << endl; 
+      cout << "7.>>>HEPTAGONO<<<" << endl;
+      cout << "8.>>>OCTOGONO<<<" << endl;
+      cout << "9.>>>ROMBO<<<" << endl;
+      cout << "10.>>>TRAPECIO<<<" << endl;
+      
+      cout << "Figura: ";
+      cin >> figura;
+
+      if(figura == 1) {
+        cout <<"AREA DEL CIRCULO"<<endl;
+        cout << "Radio: "; 
+        cin >> radio;
+        double area = 3.1416 * pow(radio, 2);
+        cout << "El Area del Circulo es: " << area << endl;
+
+      } else if(figura == 2) {
+        cout <<"AREA DEL CUADRADO"<<endl;
+        cout << "Lado: ";
+        cin >> lado1;
+        double area = pow(lado1, 2); 
+        cout << "El Area del Cuadrado es: " << area << endl;
+
+      } else if(figura == 3) { 
+        cout <<"AREA DEL TRIANGULO"<<endl;
+        cout << "Base: ";
+        cin >> lado1;
+        cout << "Altura: ";
+        cin >> lado2; 
+        double area = (lado1 * lado2) / 2;
+        cout << "El Area del Triangulo es: " << area << endl;
+
+      } else if(figura == 4) {
+        cout <<"AREA DEL RECTANGULO"<<endl;
+        cout << "Lado menor: ";
+        cin >> lado1;
+        cout << "Lado mayor: ";
+        cin >> lado2;
+        double area = lado1 * lado2;
+        cout << "El Area del Rectangulo es: " << area << endl;
+
+      } else if(figura == 5) {
+        cout <<"AREA DEL PENTAGONO"<<endl;
+        cout << "Lado: "; 
+        cin >> lado1; 
+        cout << "Apotema: ";
+        cin >> apotema;
+        double area = (5 * pow(lado1, 2)) / (4 * tan(M_PI/5));  
+        cout << "El Area del Pentagono es: " << area << endl;
+
+      } else if(figura == 6) {
+        cout <<"AREA DEL HEXAGONO"<<endl;
+        cout << "Longitud de lado: ";
+        cin >> lado1;
+        double area = (6 * pow(lado1, 2)) / (4 * tan(M_PI/6));
+        cout << "El Area del Hexagono es: " << area << endl;
+
+      } else if(figura == 7) {
+        cout <<"AREA DEL HEPTAGONO"<<endl;
+        cout << "Longitud de lado: "; 
+        cin >> lado1;
+        cout << "Apotema: ";
+        cin >> apotema;
+        double area = (7 * lado1 * apotema) / 2;
+        cout << "El Area del Heptagono es: " << area << endl;
+
+      } else if(figura == 8) {
+        cout <<"AREA DEL OCTOGONO"<<endl;
+        cout << "Longitud de lado: ";
+        cin >> lado1; 
+        cout << "Apotema: "; 
+        cin >> apotema;
+        double area = (2 + 4/tan(M_PI/8)) * pow(lado1, 2);
+        cout << "El Area del Octogono es: " << area << endl;
+
+      } else if(figura == 9) {
+        cout <<"AREA DEL ROMBO"<<endl;
+        cout << "Diagonal mayor: ";
+        cin >> lado1;
+        cout << "Diagonal menor: ";
+        cin >> lado2;
+        double area = (lado1 * lado2)/2;
+        cout << "El Area del Rombo es: " << area << endl;
+
+      } else if(figura == 10) {
+        cout <<"AREA DEL TRAPECIO"<<endl;
+        cout << "Base mayor: ";
+        cin >> bmayor;
+        cout << "Base menor: "; 
+        cin >> bmenor; 
+        cout << "Altura: ";
+        cin >> h;
+        double area = ((bmayor + bmenor) / 2) * h;
+        cout << "El Area del Trapecio es: " << area << endl << endl; 
+      }
+
+    } else if(opcion == 3) {
+
+        cout << "FIGURAS:" << endl;
+        cout << "1.___CUBO___" << endl;
+        cout << "2.___ESFERA___" << endl;
+        cout << "3.___CILINDRO___" << endl;
+        cout << "4.___CONO___" << endl;
+        cout << "5.___PIRAMIDE CUADRANGULAR___" << endl;
+        cout << "6.___PRISMA RECTANGULAR___" << endl;
+        cout << "7.___TETRAEDRO___" << endl;
+        cout << "8.___OCTAEDRO___" << endl;
+        cout << "9.___CILINDRO OBLICUO___" << endl;  
+        cout << "10.___CONO TRUNCADO___" << endl;
+
+        cout << "Figura: ";
+        cin >> figura;
+
+    if(figura == 1) {
+        cout <<"VOLUMEN DEL CUBO"<<endl;
+        cout << "Lado: ";
+        cin >> lado1;
+        double volumen = pow(lado1, 3); 
+        cout << "El Volumen del Cubo es: " << volumen << endl;   
+
+} else if(figura == 2) {
+    cout <<"VOLUMEN DE LA ESFERA"<<endl;
+    cout << "Radio: ";
+    cin >> radio;
+    double volumen = (4/3.0) * M_PI * pow(radio, 3);
+    cout << "El Volumen de la Esfera es: " << volumen << endl;
+
+} else if(figura == 3) {
+    cout <<"VOLUMEN DEL CILINDRO"<<endl;
+    cout << "Radio: ";
+    cin >> radio;
+    cout << "Altura: ";
+    cin >> lado1;
+    double volumen = M_PI * pow(radio, 2) * lado1;
+    cout << "El Volumen del Cilindro es: " << volumen << endl;
+
+} else if(figura == 4) {
+    cout <<"VOLUMEN DEL CONO"<<endl;
+    cout << "Radio: ";
+    cin >> radio;
+    cout << "Altura: ";
+    cin >> lado1;
+    double volumen = M_PI * pow(radio, 2) * (lado1/3);
+    cout << "El Volumen del Cono es: " << volumen << endl; 
+
+} else if(figura == 5) {
+    cout <<"VOLUMEN DE LA PIRAMIDE CUADRANGULAR"<<endl;
+    cout << "Lado Base: ";
+    cin >> lado1;
+    cout << "Altura Pirámide: ";
+    cin >> lado2;  
+    double volumen = (pow(lado1, 2) * lado2) / 3;
+    cout << "El Volumen de la Piramide Cuadrangular es: " << volumen << endl;
+
+} else if(figura == 6) {
+      cout <<"VOLUMEN DE LA PRISMA RECTANGULAR"<<endl;
+      cout << "Largo: ";
+      cin >> lado1;
+      cout << "Ancho: ";
+      cin >> lado2;
+      cout << "Altura: ";
+      cin >> lado3;
+      double volumen = lado1 * lado2 * lado3;
+      cout << "El Volumen de la Prisma Rectangular es: " << volumen << endl;  
+
+} else if(figura == 7) {
+      cout <<"VOLUMEN DEL TETRAEDRO"<<endl;
+      cout << "Longitud de arista: "; 
+      cin >> lado1;
+      double volumen = pow(lado1, 3) / (6 * sqrt(2)); 
+      cout << "El Volumen del Tetraedro es: " << volumen << endl;  
+
+} else if(figura == 8) {
+      cout <<"VOLUMEN DEL OCTAEDRO"<<endl;
+      cout << "Longitud de arista: ";
+      cin >> lado1;
+      double volumen = pow(lado1, 3) / 3;
+      cout << "El Volumen del Octaedro es: " << volumen << endl;   
+
+} else if(figura == 9) {
+      cout <<"VOLUMEN DEL CILINDRO OBLICUO"<<endl;
+      cout << "Diametro: "; 
+      cin >> lado1;
+      cout << "Altura: ";
+      cin >> lado2;
+      double volumen = M_PI * pow(lado1, 2) * lado2 / 4; 
+      cout << "El Volumen del Cilindro Oblicuo es: " << volumen << endl;
+
+} else if(figura == 10) {
+      cout <<"VOLUMEN DEL CONO"<<endl;
+      cout << "Radio Mayor: ";
+      cin >> radio;
+      cout << "Radio Menor: ";
+      cin >> lado1;
+      cout << "Altura: ";
+      cin >> lado2;
+      double volumen = M_PI * lado2 * (pow(radio, 2) + radio * lado1 + pow(lado1, 2)) / 3;
+      cout << "El Volumen del Cono Truncado es: " << volumen << endl;  
+}
+
+} else if(opcion == 0) {
+  break; 
+}
+
+  } while(opcion != 4);
+  
+  return 0;
+}
